@@ -266,13 +266,13 @@ div#n2-ss-4 .n2-ss-item-iframe {
   height: 100%;
 }
 div#n2-ss-4 .n2-grab {
-  cursor: url(//www.netaktiv.cz/domains/netaktiv.cz/media/nextend/n2-ss-4/../cursor/openhand.cur), move;
+  cursor: url(//localhost/netaktiv/media/nextend/n2-ss-4/../cursor/openhand.cur), move;
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
 }
 div#n2-ss-4 .n2-grabbing {
-  cursor: url(//www.netaktiv.cz/domains/netaktiv.cz/media/nextend/n2-ss-4/../cursor/closedhand.cur), move;
+  cursor: url(//localhost/netaktiv/media/nextend/n2-ss-4/../cursor/closedhand.cur), move;
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
   cursor: grabbing;
@@ -471,3 +471,4 @@ div#n2-ss-4 .n2-ss-layer {
   -webkit-backface-visibility: hidden;
 }
 
+#n2-ss-4 .n2-ss-load-fade{position: relative !important;}
