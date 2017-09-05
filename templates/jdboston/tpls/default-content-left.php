@@ -41,6 +41,8 @@ defined('_JEXEC') or die;
 
 	<?php $this->loadBlock('spotlight-2') ?>
 
+	<?php $this->loadBlock('spotlight-3') ?>
+
 	<?php $this->loadBlock('showcase') ?>
 
 	<?php $this->loadBlock('mainbody-content-left') ?>

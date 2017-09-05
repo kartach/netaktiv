@@ -38,6 +38,8 @@ defined('_JEXEC') or die;
   <?php $this->loadBlock('mainbody') ?>
 
   <?php $this->loadBlock('spotlight-2') ?>
+  
+  <?php $this->loadBlock('spotlight-3') ?>
 
   <?php $this->loadBlock('navhelper') ?>
 
