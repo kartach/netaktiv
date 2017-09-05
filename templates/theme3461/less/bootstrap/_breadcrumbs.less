@@ -1,0 +1,64 @@
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+#breadcrumbs {
+  background: @body-bg;
+  border-bottom: 1px solid #c6cad0;
+  margin-bottom: @line-height-base*2;
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  text-align: center;
+  margin: 16px 0;
+  li {
+    color: lighten(desaturate(spin(@global-color2, -9.499999999999972), 6.086956521739129%), 1.5686274509803937%);
+    font-size: 12px;
+    font-weight: 900;
+    padding: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    .divider {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 5px;
+      vertical-align: top;
+    }
+    &.active {
+      color: lighten(desaturate(spin(@global-color2, -9.499999999999972), 6.086956521739129%), 1.5686274509803937%);
+      span{
+        color: lighten(desaturate(spin(@global-color2, -9.499999999999972), 6.086956521739129%), 1.5686274509803937%);
+      }
+    }
+    >span {
+      color: lighten(desaturate(spin(@global-color2, -9.499999999999972), 6.086956521739129%), 1.5686274509803937%);
+    }
+  }
+  a {
+    color: @global-color5;
+    &:hover {
+      color: lighten(desaturate(spin(@global-color2, -9.499999999999972), 6.086956521739129%), 1.5686274509803937%);
+    }
+  }
+  .firstItem {
+    > a.pathway {
+      display: inline-block;
+      font-size: 0;
+      line-height: 0;
+      vertical-align: middle;
+      &:before {
+        content: '\f015';
+        font-family: FontAwesome;
+        font-size: 14px;
+        line-height: @line-height-base;
+        .transition(all .5s ease);
+      }
+    }
+  }
+}

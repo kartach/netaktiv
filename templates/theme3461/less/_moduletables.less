@@ -1,0 +1,51 @@
+@import "_variables.less";
+@import "bootstrap/_mixins.less";
+
+
+.moduletable {
+  .clearfix;
+  &.col-sm-12 + .moduletable {
+    clear: both;
+  }
+  &.col-sm-12:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.moduletable.col-sm-12 + * {
+  margin-top: 0;
+}
+
+.moduletable.col-sm-12.title_only + * {
+  margin-top: 0;
+}
+
+.moduletable.olark {
+  display: none;
+}
+
+// =======================
+// Module
+// =======================
+
+.moduletable {
+  &.social {
+    text-align: right;
+    .page_header {
+      display: inline-block;
+    }
+    .mod-menu {
+      display: inline-block;
+    }
+  }
+  &.indent {    
+    margin-bottom: -219px;
+    top: -219px;
+    position: relative;
+  }
+  &.droplist {    
+    margin-bottom: -180px;
+    top: -180px;
+    position: relative;
+  }
+}

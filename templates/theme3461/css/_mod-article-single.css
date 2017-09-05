@@ -1,0 +1,11 @@
+.mod-article-single {
+  margin-bottom: 30px;
+}
+.mod-article-single .item__module:before,
+.mod-article-single .item__module:after {
+  content: " ";
+  display: table;
+}
+.mod-article-single .item__module:after {
+  clear: both;
+}

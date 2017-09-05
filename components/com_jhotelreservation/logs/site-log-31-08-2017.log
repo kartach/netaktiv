@@ -1,0 +1,4 @@
+2017-08-31 16:17:28 - DEBUG --> reserveRoom hotelId= 11, reservedItem = 0|28, current = 1 
+2017-08-31 16:17:28 - DEBUG --> Reserved items: a:1:{i:0;s:6:"0|28|1";} 
+2017-08-31 22:11:16 - DEBUG --> reserveRoom hotelId= 11, reservedItem = 0|28, current = 1 
+2017-08-31 22:11:16 - DEBUG --> Reserved items: a:1:{i:0;s:6:"0|28|1";} 

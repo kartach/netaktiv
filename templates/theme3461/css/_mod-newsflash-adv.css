@@ -1,0 +1,105 @@
+.mod-newsflash-adv.counters {
+  text-align: center;
+}
+.mod-newsflash-adv.counters .counter {
+  font-size: 40px;
+  line-height: 50px;
+}
+.mod-newsflash-adv.counters .item_title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #39aa5e;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item .item_content {
+  text-align: center;
+  padding: 30px 20px;
+  border: 1px solid #39aa5e;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item .item_content ul {
+  padding: 10px 0;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item .item_content ul li {
+  font-size: 24px;
+  line-height: 26px;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item .item_content ul li:before {
+  display: none;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item .item_content ul li + li {
+  margin-top: 0;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item .item_content .item_title {
+  color: #39aa5e;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item.featured .item_content {
+  background: #374046;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .item.featured .item_content .btn:hover {
+  background: #39aa5e;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .price {
+  font-size: 40px;
+  line-height: 50px;
+  padding: 14px 0;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_simple .price span {
+  font-size: 16px;
+  line-height: 41px;
+  vertical-align: bottom;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item {
+  position: relative;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .item_title {
+  color: #39aa5e;
+  margin-bottom: 11px;
+  text-transform: uppercase;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .price {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  font-size: 40px;
+  line-height: 50px;
+  padding: 14px 0;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .price span {
+  font-size: 16px;
+  line-height: 38px;
+  vertical-align: bottom;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .item_content {
+  text-align: center;
+  padding: 30px 20px;
+  border: 1px solid #39aa5e;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .item_content ul {
+  padding: 18px 0 11px;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .item_content ul li {
+  font-size: 16px;
+  line-height: 30px;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .item_content ul li:before {
+  display: none;
+}
+.mod-newsflash-adv.mod-newsflash-adv__pricing_detailed .item .item_content ul li + li {
+  margin-top: 0;
+}
+.mod-newsflash-adv.mod-newsflash-adv__progbars_horizontal {
+  text-align: center;
+}
+.mod-newsflash-adv.mod-newsflash-adv__progbars_circle {
+  text-align: center;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .mod-newsflash-adv.mod-newsflash-adv__progbars_circle .item__module {
+    width: 50%;
+    float: left;
+  }
+}
+.mod-newsflash-adv .mod-newsflash-adv_custom-link {
+  margin-bottom: 60px;
+}

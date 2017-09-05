@@ -1,0 +1,34 @@
+@import "_variables.less";
+@import "bootstrap/_mixins.less";
+// ============================
+// Article Single Modules
+// ============================
+
+.mod-article-single {
+
+  margin-bottom: @line-height-base*2;
+
+  &[class*=_type1] {
+  	.item-title {
+  		.item_title_part_1,
+  		.item_title_part_2 {
+  			color: @global-color;
+  		}
+  	}
+  }
+
+  &[class*=_type2] {
+  	.item-title {
+  		.item_title_part_4,
+  		.item_title_part_5,
+  		.item_title_part_6 {
+  			color: @global-color;
+  		}
+  	}
+  }
+
+  .item__module {
+    .clearfix();
+  }
+
+}
