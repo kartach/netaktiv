@@ -1,1 +1,0 @@
-UPDATE `#__hotelreservation_hotels` set hotel_alias =  LOWER(REPLACE (hotel_name, ' ', '-'));

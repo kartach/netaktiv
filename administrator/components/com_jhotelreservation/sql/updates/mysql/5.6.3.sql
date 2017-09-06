@@ -1,1 +1,0 @@
-ALTER TABLE `#__hotelreservation_applicationsettings` ADD COLUMN `google_map_key` VARCHAR(45) NULL;
