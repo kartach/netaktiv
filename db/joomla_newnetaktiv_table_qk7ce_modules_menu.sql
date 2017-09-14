@@ -88,3 +88,8 @@ INSERT INTO `qk7ce_modules_menu` VALUES(235, 134);
 INSERT INTO `qk7ce_modules_menu` VALUES(236, 134);
 INSERT INTO `qk7ce_modules_menu` VALUES(237, 134);
 INSERT INTO `qk7ce_modules_menu` VALUES(238, 0);
+INSERT INTO `qk7ce_modules_menu` VALUES(239, 101);
+INSERT INTO `qk7ce_modules_menu` VALUES(240, 101);
+INSERT INTO `qk7ce_modules_menu` VALUES(241, 101);
+INSERT INTO `qk7ce_modules_menu` VALUES(242, 101);
+INSERT INTO `qk7ce_modules_menu` VALUES(243, 101);

@@ -17,4 +17,5 @@ CREATE TABLE `qk7ce_languages` (
   `ordering` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `qk7ce_languages` VALUES(1, 0, 'en-GB', 'English (UK)', 'English (UK)', 'en', 'en', '', '', '', '', 1, 1, 1);
+INSERT INTO `qk7ce_languages` VALUES(1, 0, 'en-GB', 'English (UK)', 'English (UK)', 'en', 'en', '', '', '', '', 0, 1, 1);
+INSERT INTO `qk7ce_languages` VALUES(2, 768, 'cs-CZ', 'Czech', 'Czech', 'cs', 'cs_cz', '', '', '', 'NETAKTIV - online marketing', 1, 1, 0);
