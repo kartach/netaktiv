@@ -1333,8 +1333,7 @@ mark,
 .text-uppercase {
   text-transform: uppercase;
 }
-.text-capitalize {
-  text-transform: capitalize;
+
 }
 .text-muted {
   color: #777777;
@@ -3734,7 +3733,6 @@ legend + .control-group {
   border: none;
   max-width: 100%;
   padding: 12px 26px;
-  text-transform: capitalize;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

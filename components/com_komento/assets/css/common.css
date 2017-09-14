@@ -143,7 +143,7 @@
 #komento-dialog .prl,#komento-wrapper .prl{padding-right:15px}
 #komento-dialog .prb,#komento-wrapper .prb{padding-right:20px}
 
-body #komento-wrapper .ui-button{border:1px solid #bbb;border-bottom:1px solid #999;border-right:1px solid #999;color:#555 !important;cursor:pointer;font-family:Arial !important;font-size:11px !important;font-weight:bold;padding:0 8px !important;text-decoration:none !important;text-transform:capitalize !important;height:20px !important;line-height:20px !important;white-space:nowrap;
+body #komento-wrapper .ui-button{border:1px solid #bbb;border-bottom:1px solid #999;border-right:1px solid #999;color:#555 !important;cursor:pointer;font-family:Arial !important;font-size:11px !important;font-weight:bold;padding:0 8px !important;text-decoration:none !important;height:20px !important;line-height:20px !important;white-space:nowrap;
 	-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
 	background: url(../images/ui-button.png) bottom repeat-x #fff !important;}
 body #komento-wrapper a.ui-button{display:inline-block;height:19px !important;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}

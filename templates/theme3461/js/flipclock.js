@@ -1160,11 +1160,10 @@ var FlipClock;
 	 * Capitalize the first letter in a string
 	 *
 	 * @return string
-	 */
-	 
-	String.prototype.ucfirst = function() {
-		return this.substr(0, 1).toUpperCase() + this.substr(1);
+	 * String.prototype.ucfirst = function() {
+	 * return this.substr(0, 1).toUpperCase() + this.substr(1);
 	};
+		 */
 	
 	/**
 	 * jQuery helper method
