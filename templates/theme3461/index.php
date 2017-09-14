@@ -135,7 +135,7 @@ include_once('includes/includes.php'); ?>
                                 <?php }
                                 if($this->params->get('footerCopy')) echo '<span class="copy">&copy; </span>';
                                 if($this->params->get('footerYear')) echo '<span class="year">'.date('Y').' </span>';
-                                if($this->params->get('footerText')) echo '<span class="text">All Rights Reserved. </span>';
+                                if($this->params->get('footerText')) echo '<span class="text">Všechna práva vyhrazena. </span>';
                                 if($this->params->get('termsLink')){ ?>
                                 <a class="terms_link" href="<?php echo $terms_link_url; ?>">
                                     <?php echo $this->params->get('terms_link_title'); ?>
@@ -147,9 +147,7 @@ include_once('includes/includes.php'); ?>
                                 </a>
                                 <?php } ?>
                             </div>
-                            <jdoc:include type="modules" name="copyright" style="themeHtml5"/>
-                            <?php echo $todesktop; ?>
-                            More Advertising Agency Templates at <a  rel='nofollow' href='http://www.templatemonster.com/category.php?category=133&type=24' target='_blank'>TemplateMonster.com</a>
+                            <jdoc:include type="modules" name="copyright" style="themeHtml5"/>                    
                         </div>
                     </div>
                 </div>
