@@ -114,6 +114,11 @@ include_once('includes/includes.php'); ?>
                         echo display_position('footer','','','class="stuck_position"');
                     }
                 } ?>
+                <!-- Custom module Klara -->
+               <div id="customfooter>"
+               		<jdoc:include type="modules" name="customfooter"
+               style="xhtml"/>
+               </div> 
                 <!-- Copyright -->
                 <div id="copyright" role="contentinfo">
                     <?php $layout = $params->get('copyright_layout');
