@@ -24,7 +24,7 @@ CREATE TABLE `qk7ce_newsfeeds` (
   `metakey` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadesc` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadata` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'A reference to enable linkages to external data sets.',
+  `xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `description` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,

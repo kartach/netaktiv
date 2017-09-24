@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS `qk7ce_languages`;
 CREATE TABLE `qk7ce_languages` (
   `lang_id` int(11) UNSIGNED NOT NULL,
-  `asset_id` int(11) NOT NULL,
+  `asset_id` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `lang_code` char(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `title` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title_native` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,

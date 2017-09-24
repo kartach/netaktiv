@@ -2,8 +2,8 @@
 DROP TABLE IF EXISTS `qk7ce_contact_details`;
 CREATE TABLE `qk7ce_contact_details` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `con_position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` mediumtext COLLATE utf8mb4_unicode_ci,
   `suburb` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -26,10 +26,10 @@ CREATE TABLE `qk7ce_contact_details` (
   `access` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `webpage` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `sortname1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sortname2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sortname3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sortname1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `sortname2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `sortname3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `language` varchar(7) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -39,11 +39,11 @@ CREATE TABLE `qk7ce_contact_details` (
   `metadesc` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `metadata` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Set if article is featured.',
-  `xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'A reference to enable linkages to external data sets.',
+  `xreference` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'A reference to enable linkages to external data sets.',
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `version` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hits` int(10) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `qk7ce_contact_details` VALUES(1, 'Website Owner', 'website-owner', 'website owner', 'Praha', 'Kingsport', 'Illinois', 'U.S.', '121164', '733 767 303', '733 767 303', '<p>Napište nám jakýkoli dotaz/připomínku. Odpovíme Vám nejdéle do 24 hodin.</p>', '', 'mail@demolink.org', 0, 1, 0, '0000-00-00 00:00:00', 1, '{\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"presentation_style\":\"plain\",\"show_tags\":\"\",\"show_name\":\"0\",\"show_position\":\"0\",\"show_email\":\"1\",\"show_street_address\":\"1\",\"show_suburb\":\"1\",\"show_state\":\"1\",\"show_postcode\":\"1\",\"show_country\":\"\",\"show_telephone\":\"1\",\"show_mobile\":\"0\",\"show_fax\":\"1\",\"show_webpage\":\"\",\"show_misc\":\"1\",\"show_image\":\"0\",\"allow_vcard\":\"1\",\"show_articles\":\"0\",\"articles_display_num\":\"\",\"show_profile\":\"0\",\"show_links\":\"0\",\"linka_name\":\"\",\"linka\":false,\"linkb_name\":\"\",\"linkb\":false,\"linkc_name\":\"\",\"linkc\":false,\"linkd_name\":\"\",\"linkd\":false,\"linke_name\":\"\",\"linke\":false,\"contact_layout\":\"\",\"show_email_form\":\"0\",\"show_email_copy\":\"\",\"banned_email\":\"\",\"banned_subject\":\"\",\"banned_text\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\"}', 846, 30, 1, '+1 959 603 6035', 'http://demolink.org', '', '', '', '*', '2014-05-02 21:36:02', 443, '', '2015-10-20 11:47:58', 846, '', '', '{\"robots\":\"\",\"rights\":\"\"}', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 8, 695);
+INSERT INTO `qk7ce_contact_details` VALUES(1, 'Website Owner', 'website-owner', 'website owner', '', 'Praha', '', 'U.S.', '', '', '', '<p>Obraťte se na nás s jakýmkoli dotazem přes kontaktiní formulář nebo emailem. Ozveme se Vám nejdéle do 24 hodin.  </p>', '', 'info@netaktiv.cz', 0, 1, 443, '2017-09-17 10:04:38', 1, '{\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"presentation_style\":\"plain\",\"show_tags\":\"\",\"show_info\":\"\",\"show_name\":\"0\",\"show_position\":\"0\",\"show_email\":\"1\",\"add_mailto_link\":\"\",\"show_street_address\":\"1\",\"show_suburb\":\"1\",\"show_state\":\"1\",\"show_postcode\":\"1\",\"show_country\":\"\",\"show_telephone\":\"1\",\"show_mobile\":\"0\",\"show_fax\":\"1\",\"show_webpage\":\"\",\"show_image\":\"0\",\"show_misc\":\"1\",\"allow_vcard\":\"1\",\"show_articles\":\"0\",\"articles_display_num\":\"\",\"show_profile\":\"0\",\"show_links\":\"0\",\"linka_name\":\"\",\"linka\":false,\"linkb_name\":\"\",\"linkb\":false,\"linkc_name\":\"\",\"linkc\":false,\"linkd_name\":\"\",\"linkd\":false,\"linke_name\":\"\",\"linke\":false,\"contact_layout\":\"\",\"show_email_form\":\"0\",\"show_email_copy\":\"\",\"banned_email\":\"\",\"banned_subject\":\"\",\"banned_text\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\"}', 846, 30, 1, '+420 733 767 303', 'http://netaktiv.cz', '', '', '', '*', '2014-05-02 21:36:02', 443, '', '2017-09-17 10:07:59', 443, '', '', '{\"robots\":\"\",\"rights\":\"\"}', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 9, 766);

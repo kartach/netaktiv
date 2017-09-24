@@ -5,7 +5,7 @@ CREATE TABLE `qk7ce_finder_links` (
   `url` varchar(255) NOT NULL,
   `route` varchar(255) NOT NULL,
   `title` varchar(400) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
+  `description` text,
   `indexdate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `md5sum` varchar(32) DEFAULT NULL,
   `published` tinyint(1) NOT NULL DEFAULT '1',

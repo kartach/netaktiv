@@ -83,6 +83,31 @@ ALTER TABLE `qk7ce_extensions`
   ADD KEY `element_folder_clientid` (`element`,`folder`,`client_id`),
   ADD KEY `extension` (`type`,`element`,`folder`,`client_id`);
 
+ALTER TABLE `qk7ce_fields`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_checkout` (`checked_out`),
+  ADD KEY `idx_state` (`state`),
+  ADD KEY `idx_created_user_id` (`created_user_id`),
+  ADD KEY `idx_access` (`access`),
+  ADD KEY `idx_context` (`context`(191)),
+  ADD KEY `idx_language` (`language`);
+
+ALTER TABLE `qk7ce_fields_categories`
+  ADD PRIMARY KEY (`field_id`,`category_id`);
+
+ALTER TABLE `qk7ce_fields_groups`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_checkout` (`checked_out`),
+  ADD KEY `idx_state` (`state`),
+  ADD KEY `idx_created_by` (`created_by`),
+  ADD KEY `idx_access` (`access`),
+  ADD KEY `idx_context` (`context`(191)),
+  ADD KEY `idx_language` (`language`);
+
+ALTER TABLE `qk7ce_fields_values`
+  ADD KEY `idx_field_id` (`field_id`),
+  ADD KEY `idx_item_id` (`item_id`(191));
+
 ALTER TABLE `qk7ce_finder_filters`
   ADD PRIMARY KEY (`filter_id`);
 
@@ -255,6 +280,9 @@ ALTER TABLE `qk7ce_joomgallery_votes`
   ADD PRIMARY KEY (`voteid`),
   ADD KEY `idx_picid` (`picid`);
 
+ALTER TABLE `qk7ce_keenitportfolio_portfolio`
+  ADD PRIMARY KEY (`id`);
+
 ALTER TABLE `qk7ce_komento_acl`
   ADD PRIMARY KEY (`id`),
   ADD KEY `komento_acl_content_type` (`type`);
@@ -426,7 +454,6 @@ ALTER TABLE `qk7ce_kunena_version`
 ALTER TABLE `qk7ce_languages`
   ADD PRIMARY KEY (`lang_id`),
   ADD UNIQUE KEY `idx_sef` (`sef`),
-  ADD UNIQUE KEY `idx_image` (`image`),
   ADD UNIQUE KEY `idx_langcode` (`lang_code`),
   ADD KEY `idx_access` (`access`),
   ADD KEY `idx_ordering` (`ordering`);
@@ -516,6 +543,62 @@ ALTER TABLE `qk7ce_template_styles`
   ADD KEY `idx_template` (`template`),
   ADD KEY `idx_home` (`home`);
 
+ALTER TABLE `qk7ce_tz_portfolio_plus_addon_data`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_categories`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cat_idx` (`extension`,`published`,`access`),
+  ADD KEY `idx_access` (`access`),
+  ADD KEY `idx_checkout` (`checked_out`),
+  ADD KEY `idx_path` (`path`),
+  ADD KEY `idx_left_right` (`lft`,`rgt`),
+  ADD KEY `idx_alias` (`alias`),
+  ADD KEY `idx_language` (`language`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_content`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idx_access` (`access`),
+  ADD KEY `idx_checkout` (`checked_out`),
+  ADD KEY `idx_state` (`state`),
+  ADD KEY `idx_createdby` (`created_by`),
+  ADD KEY `idx_featured_catid` (`featured`),
+  ADD KEY `idx_language` (`language`),
+  ADD KEY `idx_xreference` (`xreference`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_content_category_map`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_content_featured_map`
+  ADD PRIMARY KEY (`content_id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_content_rating`
+  ADD KEY `extravote_idx` (`content_id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_extensions`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_fieldgroups`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_fields`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_field_content_map`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_field_fieldgroup_map`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_tags`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_tag_content_map`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `qk7ce_tz_portfolio_plus_templates`
+  ADD PRIMARY KEY (`id`);
+
 ALTER TABLE `qk7ce_ucm_base`
   ADD PRIMARY KEY (`ucm_id`),
   ADD KEY `idx_ucm_item_id` (`ucm_item_id`),
@@ -600,21 +683,25 @@ ALTER TABLE `qk7ce_weblinks`
 
 
 ALTER TABLE `qk7ce_assets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=774;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=860;
 ALTER TABLE `qk7ce_banners`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_banner_clients`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 ALTER TABLE `qk7ce_contact_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 ALTER TABLE `qk7ce_content`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
 ALTER TABLE `qk7ce_content_types`
-  MODIFY `type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 ALTER TABLE `qk7ce_extensions`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10173;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10184;
+ALTER TABLE `qk7ce_fields`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_fields_groups`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_finder_filters`
   MODIFY `filter_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_finder_links`
@@ -643,6 +730,8 @@ ALTER TABLE `qk7ce_joomgallery_users`
   MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_joomgallery_votes`
   MODIFY `voteid` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_keenitportfolio_portfolio`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 ALTER TABLE `qk7ce_komento_acl`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 ALTER TABLE `qk7ce_komento_actions`
@@ -690,13 +779,13 @@ ALTER TABLE `qk7ce_kunena_version`
 ALTER TABLE `qk7ce_languages`
   MODIFY `lang_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 ALTER TABLE `qk7ce_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=586;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=621;
 ALTER TABLE `qk7ce_menu_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 ALTER TABLE `qk7ce_messages`
   MODIFY `message_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 ALTER TABLE `qk7ce_modules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=244;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=289;
 ALTER TABLE `qk7ce_newsfeeds`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_overrider`
@@ -704,7 +793,7 @@ ALTER TABLE `qk7ce_overrider`
 ALTER TABLE `qk7ce_plg_slogin_profile`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_postinstall_messages`
-  MODIFY `postinstall_message_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `postinstall_message_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 ALTER TABLE `qk7ce_redirect_links`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_slogin_users`
@@ -713,6 +802,30 @@ ALTER TABLE `qk7ce_tags`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 ALTER TABLE `qk7ce_template_styles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+ALTER TABLE `qk7ce_tz_portfolio_plus_addon_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `qk7ce_tz_portfolio_plus_content`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_content_category_map`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_extensions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+ALTER TABLE `qk7ce_tz_portfolio_plus_fieldgroups`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_fields`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_field_content_map`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_field_fieldgroup_map`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_tags`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_tag_content_map`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `qk7ce_tz_portfolio_plus_templates`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 ALTER TABLE `qk7ce_ucm_content`
   MODIFY `core_content_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 ALTER TABLE `qk7ce_ucm_history`
@@ -720,7 +833,7 @@ ALTER TABLE `qk7ce_ucm_history`
 ALTER TABLE `qk7ce_updates`
   MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `qk7ce_update_sites`
-  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 ALTER TABLE `qk7ce_usergroups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=10;
 ALTER TABLE `qk7ce_users`

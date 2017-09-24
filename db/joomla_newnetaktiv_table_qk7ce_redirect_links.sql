@@ -5,7 +5,7 @@ CREATE TABLE `qk7ce_redirect_links` (
   `old_url` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
   `new_url` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
   `referer` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `hits` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `published` tinyint(4) NOT NULL,
   `created_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',

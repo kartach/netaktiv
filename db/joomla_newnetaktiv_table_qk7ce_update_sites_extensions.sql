@@ -18,3 +18,4 @@ INSERT INTO `qk7ce_update_sites_extensions` VALUES(12, 10032);
 INSERT INTO `qk7ce_update_sites_extensions` VALUES(12, 10164);
 INSERT INTO `qk7ce_update_sites_extensions` VALUES(13, 10168);
 INSERT INTO `qk7ce_update_sites_extensions` VALUES(13, 10169);
+INSERT INTO `qk7ce_update_sites_extensions` VALUES(14, 10177);
